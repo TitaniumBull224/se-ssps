@@ -1,0 +1,111 @@
+\section{Task1: Requirement elicitation}
+\subsection{Domain Context}
+Bối cảnh của HCMUT-SSPS xoay quanh nhu cầu in ấn của sinh viên tại các cơ sở của trường đại học Bách Khoa,TP Hồ Chí Minh. Dịch vụ được phân bổ bao gồm nhiều máy in trong khắp các tòa nhà trong khuân viên của trường. Dịch vụ này nhằm mang lại giải pháp thuận tiện, hiệu quả và tiết kiệm chi phí để sinh viên có thể in các tài liệu học tập của mình. Hệ thống tích hợp nhiều chức năng khác nhau, bao gồm tải tài liệu lên, lựa chọn máy in, theo dõi lịch sử sử dụng in ấn, tùy chỉnh các thuộc tính in như kích cỡ giấy, trang cần in, in một mặt hay hai mặt, số lượng bản sao...,quản lý thanh toán thông qua hệ thống thanh toán BKPAY của trường.
+
+\subsection{Stakeholders and Needs}
+\subsubsection{Sinh viên}
+Sinh viên là đối tượng sử dụng chính của hệ thống, đòi hỏi một nền tảng in ấn đáng tin cậy và dễ tiếp cận để in các bài tập, ghi chú bài giảng, cùng các tài liệu học tập khác. Những nhu cầu chính của họ bao gồm dễ sử dụng, tiết kiệm chi phí, đảm bảo tính bảo mật thông tin cá nhân, hỗ trợ nhiều định dạng tài liệu in phổ biến và khả năng theo dõi việc sử dụng in ấn của mình.
+
+\subsubsection{SPSO}
+SPSO chịu trách nhiệm quản lý và duy trì hệ thống. Nhu cầu của họ bao gồm các công cụ hiệu quả để theo dõi trạng thái máy in, tài nguyên in ấn; quản lý tài khoản người dùng; tạo báo cáo sử dụng; và theo dõi chi phí.
+
+\subsubsection{Administrator}
+Administrator là người quản lý có quyền hạn cao nhất trong hệ thống, có khả năng quản lý các sinh viên cũng như phân cấp quyền hạn cho các SPSO để quản lý việc in ấn trong trường, quản lý dòng tiền trong việc in ấn.
+
+\subsection{Lợi ích của HCMUT-SSPS đối với từng stakeholder}
+\subsubsection{Sinh viên}
+Sinh viên sẽ thấy việc in tài liệu trở nên tiện lợi và hiệu quả hơn nhờ hệ thống này. Hệ thống cho phép quản lý việc in ấn ngay trong khuân viên trường, giúp giảm bớt việc phải di chuyển ra ngoài trường để in. Sinh viên còn có thể theo dõi số lượng in ấn cá nhân, do đó giúp họ có thể quản lý tốt hơn về số lượng trang đã in của mình, hơn nữa với tính năng liên kết thông qua dịch vụ thanh toán BKPAY, giúp sinh viên dễ dàng mua thêm giấy khi nhu cầu in ấn của mình vượt quá hạn mức được cấp. Ngoài ra hệ thống còn đảm bảo tính bảo mật cho sinh viên khi chỉ có những sinh viên đăng nhập qua HCMUT-SSO mới có thể sử dụng dịch vụ bảo vệ tài liệu in và thông tin cá nhân.
+
+\subsubsection{SPSO}
+SPSO có thể đơn giản hóa các công việc quản lý nhờ giao diện thân thiện và với tính năng báo cáo tự động của hệ thống theo tháng và năm, giúp họ dễ dàng theo dõi và tập trung vào các khía cạnh chiến lược hơn của dịch vụ in ấn. Hơn nữa hệ thống còn cung cấp cho SPSO có thể dễ dàng quản lý toàn bộ các máy in trong khuôn viên trường từ một hệ thống duy nhất, bao gồm thêm mới, bật/tắt và theo dõi trạng thái máy in. Hệ thống cung cấp thông tin chi tiết về thói quen sử dụng in ấn và chi phí, hỗ trợ đưa ra quyết định phân bổ tài nguyên hợp lý và nhận diện các điểm cần cải thiện. %ngoài ra hệ thống còn tích hợp thanh toán thông qua BKPAY giúp SPSO có thể dễ dàng quản lý dòng tiền của hệ thống   
+
+\subsubsection{Administrator}
+Hệ thống cho phép Administrator có thể sử dụng tất cả các chức năng dành cho SPSO cũng như quản lý và cấp phép quyền hạn cho các SPSO. Ngoài ra hệ thống cũng có thể quản lý dòng tiền thông qua BKPay để có thể tính toán chi phí cũng như doanh số in ấn trong một khoảng thời gian xác định cho Administrator.
+
+\subsection{Functional Requirements}
+Sinh viên:
+\begin{itemize}
+	\item[-] Sinh viên có thể đăng nhập hệ thống bằng tài khoản mà mình được cung cấp.
+	\item[-] Tải lên tài liệu với các định dạng tệp được hỗ trợ để in.
+	\item[-] Chọn máy in từ các tùy chọn có sẵn.
+	\item[-] Có thể tùy chỉnh thuộc tính in như kích thước giấy, số trang in, in một mặt/hai mặt và số lượng bản in.
+	\item[-] Xem lịch sử in ấn và số trang đã in trong một thời gian cụ thể.
+	\item[-] Sinh viên có thể kiểm tra số trang in còn lại và mua thêm số lượng trang in.
+\end{itemize}
+
+SPSO:
+\begin{itemize}
+	\item[-] Quản lý tình trạng, thêm, cập nhật, kích hoạt và vô hiệu hóa các máy in cụ thể.
+	\item[-] Quản lý thông số in ấn bao gồm định dạng file, giới hạn số trang mặc định và các loại tệp được phép in.
+	\item[-] Xem và quản lý lịch sử in ấn của sinh viên.
+	\item[-] Tạo báo cáo về việc sử dụng in ấn trong các khoảng thời gian cụ thể.
+	\item[-] Giám sát tổng thể việc sử dụng in ấn.
+\end{itemize}
+
+Administrator:
+\begin{itemize}
+	\item[-] Quản lý tình trạng, thêm, cập nhật, kích hoạt và vô hiệu hóa các máy in cụ thể.
+	\item[-] Quản lý thông số in ấn bao gồm định dạng file, giới hạn số trang mặc định và các loại tệp được phép in.
+	\item[-] Xem và quản lý lịch sử in ấn của sinh viên.
+	\item[-] Tạo báo cáo về việc sử dụng in ấn trong các khoảng thời gian cụ thể.
+	\item[-] Quản lý tài khoản sinh viên và phân cấp quyền hạn cho SPSO.
+	\item[-] Giám sát tổng thể việc sử dụng in ấn.
+	\item[-] Theo dõi chi phí in ấn và tính toán doanh thu hàng tháng.
+\end{itemize}
+
+
+\subsection{Non-functional Requirements}
+\begin{itemize}
+	\item \textbf{Hiệu suất:}
+	      \begin{itemize}
+		      \item Thời gian phản hồi phải dưới 1 giây cho tất cả các chức năng chính (ví dụ: tải tài liệu lên, chọn máy in, khởi động quá trình in) ngay cả trong điều kiện tải cao nhất (100 người dùng đồng thời).
+	      \end{itemize}
+	\item \textbf{Khả năng mở rộng:}
+	      \begin{itemize}
+		      \item Hệ thống phải dễ dàng mở rộng bằng cách thêm máy chủ để đáp ứng nhu cầu ngày càng tăng.
+		      \item Hệ thống cũng cần có khả năng nâng cấp với phần cứng mạnh hơn (ví dụ: tăng CPU, RAM) để cải thiện hiệu suất.
+	      \end{itemize}
+	\item \textbf{Tương thích:}
+	      \begin{itemize}
+		      \item Hệ thống phải truy cập được thông qua các trình duyệt web(ví dụ: Chrome, Firefox, Edge) trên nhiều thiết bị (máy tính để bàn, laptop, máy tính bảng, điện thoại thông minh).
+		      \item Hệ thống cần tích hợp liền mạch với các dịch vụ bên thứ ba như BKPay và dịch vụ xác thực HCMUT\_SSO.
+	      \end{itemize}
+	\item \textbf{Độ tin cậy:}
+	      \begin{itemize}
+		      \item Hệ thống phải xử lý được tối đa 100 người dùng đồng thời trong giờ cao điểm.
+		      \item Hệ thống cần duy trì thời gian hoạt động là 99.9\%, đảm bảo thời gian ngừng hoạt động tối thiểu cho người dùng.
+	      \end{itemize}
+	\item \textbf{Khả năng bảo trì:}
+	      \begin{itemize}
+		      \item Mã nguồn của hệ thống phải được cấu trúc tốt, có tài liệu rõ ràng và tuân thủ các tiêu chuẩn lập trình để dễ bảo trì.
+	      \end{itemize}
+	\item \textbf{Khả dụng:}
+	      \begin{itemize}
+		      \item Hệ thống phải hoạt động liên tục từ 7 giờ sáng đến 5 giờ chiều, từ thứ Hai đến thứ Bảy.
+	      \end{itemize}
+	\item \textbf{Bảo mật:}
+	      \begin{itemize}
+		      \item Hệ thống phải đảm bảo và bảo vệ dữ liệu người dùng khỏi truy cập trái phép thông qua các biện pháp như mã hóa, xác thực và các giao thức ủy quyền.
+		      \item Hệ thống cần tuân thủ các quy định về bảo mật và quyền riêng tư liên quan, như GDPR và các luật bảo vệ dữ liệu của Việt Nam.
+	      \end{itemize}
+	\item \textbf{Tính khả dụng:}
+	      \begin{itemize}
+		      \item Hệ thống cần có giao diện dễ nhìn, trực quan, dễ sử dụng và có thể học trong vòng 3 giờ thông qua hướng dẫn hoặc tự tìm hiểu.
+		      \item Hệ thống hỗ trợ tiếng Việt làm ngôn ngữ chính, với tiếng Anh là tùy chọn ngôn ngữ bổ sung.
+	      \end{itemize}
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
