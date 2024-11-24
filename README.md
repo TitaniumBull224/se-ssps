@@ -15,8 +15,8 @@ Hệ thống sử dụng công nghệ hiện đại để cung cấp giải phá
 Hệ thống áp dụng kiến trúc phân lớp với giao diện thân thiện, tích hợp xác thực qua HCMUT-SSO và hỗ trợ thanh toán trực tuyến qua BKPay.
 
 **Liên kết GitHub**: [TitaniumBull224/se-ssps](https://github.com/TitaniumBull224/se-ssps.git)
-**Liên kết Figma**: https://www.figma.com/design/ZWQr4MM5wFkO0LIY1hLAVV/Printing?node-id=0-1&node-type=canvas&t=zkOawXq4k6kyzYCN-0 
 
+**Liên kết Figma**: https://www.figma.com/design/ZWQr4MM5wFkO0LIY1hLAVV/Printing?node-id=0-1&node-type=canvas&t=zkOawXq4k6kyzYCN-0 
 
 
  
