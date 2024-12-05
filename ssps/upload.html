@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Upload Page</title>
+        <link rel="stylesheet" href="css/upload.css" />
+    </head>
+    <body>
+        <div id="nav-placeholder"></div>
+        <div class="container">
+            <div class="upload-container">
+                <div class="header-section">
+                    <div class="header-wrapper">
+                        <div class="header-content">
+                            <div class="header-left">
+                                <h1 class="upload-title">Tải tài liệu</h1>
+                                <p class="upload-description">
+                                    Thêm tài liệu của bạn vào đây
+                                </p>
+                            </div>
+                            <div class="header-right"></div>
+                        </div>
+                    </div>
+                </div>
+                <p class="file-types">
+                    Chỉ hỗ trợ các file có dạng .pdf, .xlxs, .docx, .doc
+                </p>
+                <div class="upload-area" tabindex="0" role="button">
+                    <div class="upload-content">
+                        <img
+                            src="img//upload/upload_icon.svg"
+                            alt=""
+                            class="upload-icon"
+                        />
+                        <p class="drag-text">
+                            Kéo thả file của bạn vào đây để tải lên
+                        </p>
+                        <div class="divider">
+                            <div class="divider-line"></div>
+                            <span class="divider-text">hoặc</span>
+                            <div class="divider-line"></div>
+                        </div>
+                        <button class="browse-button">Duyệt từ máy tính</button>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button class="cancel-button" onclick="location.href='dashboard.html'">Hủy</button>
+                    <button class="next-button" onclick="location.href='print.html'">Tiếp</button>
+            </div>
+        </div>
+
+        <script>
+            fetch("components/nav.html")
+                .then((response) => response.text())
+                .then((data) => {
+                    document.getElementById("nav-placeholder").innerHTML = data;
+                });
+        </script>
+    </body>
+</html>
