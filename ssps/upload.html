@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Upload Page</title>
+        <script src="js/nav.js"></script>
         <link rel="stylesheet" href="css/upload.css" />
     </head>
     <body>
@@ -26,10 +27,21 @@
                 <p class="file-types">
                     Chỉ hỗ trợ các file có dạng .pdf, .xlxs, .docx, .doc
                 </p>
-                <div class="upload-area" tabindex="0" role="button">
+                <div class="upload-area">
+                    <label for="file-input" class="visually-hidden">
+                        Choose file to upload
+                    </label>
+                    <input
+                        type="file"
+                        id="file-input"
+                        class="hidden"
+                        title="Choose file to upload"
+                        accept=".pdf, .xlxs, .docx, .doc"
+                        multiple
+                    />
                     <div class="upload-content">
                         <img
-                            src="img//upload/upload_icon.svg"
+                            src="img/upload/upload_icon.svg"
                             alt=""
                             class="upload-icon"
                         />
@@ -44,18 +56,24 @@
                         <button class="browse-button">Duyệt từ máy tính</button>
                     </div>
                 </div>
+                <div class="uploaded-files"></div>
                 <div class="action-buttons">
-                    <button class="cancel-button" onclick="location.href='dashboard.html'">Hủy</button>
-                    <button class="next-button" onclick="location.href='print.html'">Tiếp</button>
+                    <button
+                        class="cancel-button"
+                        onclick="location.href='dashboard.html'"
+                    >
+                        Hủy
+                    </button>
+                    <button
+                        class="next-button"
+                        onclick="location.href='print.html'"
+                    >
+                        Tiếp
+                    </button>
+                </div>
             </div>
         </div>
 
-        <script>
-            fetch("components/nav.html")
-                .then((response) => response.text())
-                .then((data) => {
-                    document.getElementById("nav-placeholder").innerHTML = data;
-                });
-        </script>
+        <script src="js/upload.js"></script>
     </body>
 </html>
