@@ -1,13 +1,13 @@
 
 .mainlogin{
-	display: flex; /* Kích hoạt Flexbox */
-	justify-content: center; /* Căn giữa theo chiều ngang */
-	align-items: center; /* Căn giữa theo chiều dọc */
-	min-height: 100vh; /* Chiều cao bằng toàn màn hình */
-	background-color:rgb(218, 212, 212);  /* Màu nền tùy chỉnh */
-	margin: 0; /* Loại bỏ khoảng cách mặc định */
+	display: flex; 
+	justify-content: center; 
+	align-items: center; 
+	min-height: 100vh; 
+	background-color:rgb(234, 229, 229);  
+	margin: 0; 
 	padding: 0;
-	box-sizing: border-box; /* Đảm bảo padding không làm ảnh hưởng kích thước */
+	box-sizing: border-box; 
 }
 .main{
 	width: 350px;
