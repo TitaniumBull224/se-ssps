@@ -112,8 +112,8 @@
         font-family: Outfit, sans-serif;
       }
       #myCarousel .carousel-item img {
-        object-fit: cover; /* Đảm bảo hình ảnh không bị kéo giãn, chỉ hiển thị phần trung tâm */
-        height: 500px; /* Bạn có thể điều chỉnh chiều cao của ảnh cho phù hợp */
+        object-fit: cover; 
+        height: 500px; 
       }
       .language-botton{
         background-color: rgba(80, 140, 155, 1);
