@@ -5,7 +5,7 @@
     flex-direction: column;
     overflow: hidden;
     justify-content: center;
-    padding: 15px 70px;
+    padding: 12px 70px;
     box-sizing: border-box;
     position: fixed; /**/ /*pin header*/ 
 }
