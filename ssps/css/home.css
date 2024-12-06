@@ -89,7 +89,7 @@
         color:floralwhite; 
         background-color: rgba(255, 255, 255, 0.226); 
         border-radius: 8px; 
-        padding: 1px; 
+        
       }
       .Login{
         text-decoration: none;
@@ -99,8 +99,9 @@
       .Login:hover{
         color:floralwhite;
         background-color: rgba(255, 255, 255, 0.226);
-        border-radius: 8px;
-        padding: 5px;   
+        border-radius: 8px; 
+        padding: 12px 18px; 
+       
 
       }
       .HCMUT{
@@ -109,4 +110,11 @@
       .nav-item{
         font-size: 15px;
         font-family: Outfit, sans-serif;
+      }
+      #myCarousel .carousel-item img {
+        object-fit: cover; /* Đảm bảo hình ảnh không bị kéo giãn, chỉ hiển thị phần trung tâm */
+        height: 500px; /* Bạn có thể điều chỉnh chiều cao của ảnh cho phù hợp */
+      }
+      .language-botton{
+        background-color: rgba(80, 140, 155, 1);
       }
