@@ -1,16 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Dashboard Page</title>
-        <script src="js/nav.js"></script>
-        <link rel="stylesheet" href="css/dashboard.css" />
-    </head>
-    <body>
-        <div id="nav-placeholder"></div>
-        <div class="container">
-            <!-- input here -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="./css/dashboard.css">
+  <script src="js/nav.js"></script>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <div class="dashboard">
+    <section class="profile-section">
+      <div class="profile-container">
+        <img
+          loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/570935b980fd3997f068e7f7604075dba68f9e6cd1b7dcc492b8facc654438a1?placeholderIfAbsent=true&apiKey=847503bdbe2444d38b416e0e3cfc2f85"
+          class="profile-avatar"
+          alt="Profile photo of Diệp Vũ Minh"
+        />
+        <div class="profile-info">
+          <h1 class="profile-name">Diệp Vũ Minh</h1>
+          <div class="profile-labels">
+            <span class="profile-label">Khoa học máy tính</span>
+            <span class="profile-label">K22</span>
+          </div>
         </div>
-    </body>
+        <button class="edit-button">Chỉnh sửa</button>
+      </div>
+      <img
+        loading="lazy"
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/4375c0390c2ebe6f7cc8a48da21680487a9b51a064afdf60421a0e7a8892be8b?placeholderIfAbsent=true&apiKey=847503bdbe2444d38b416e0e3cfc2f85"
+        class="divider"
+        alt=""
+      />
+    </section>
+
+    <section class="stats-section">
+      <div class="stats-container">
+        <div class="history-module">
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/5b035ca0b00856cb2ae1d3f48acb3a7aa0b3f6f04f7bf495deba6df34419a01d?placeholderIfAbsent=true&apiKey=847503bdbe2444d38b416e0e3cfc2f85"
+            class="history-icon"
+            alt="Print history icon"
+          />
+          <div class="history-content">
+            <h2 class="history-title">Lịch sử in</h2>
+            <p class="history-description">Xem chi tiết lịch sử in</p>
+            <div class="button-wrapper">
+              <button class="primary-button">Chi tiết</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pages-module">
+            <div class="pages-counter">
+                <div class="counter-box">25</div>
+              </div>
+          <div class="history-content">
+            <h2 class="history-title">Số trang in còn lại</h2>
+            <p class="history-description">Xem số trang bạn còn</p>
+            <div class="button-wrapper">
+              <button class="primary-button">Mua thêm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="recent-section">
+      <div class="recent-container">
+        <h2 class="recent-title">Gần đây...</h2>
+        <div class="recent-items">
+          <div class="print-session">
+            <div class="session-content">
+              <time class="session-date">1/10/2024</time>
+              <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/57e873b7434ddcd4bf72e540f9421c6f2d1d4eebfe1f236af876410fbd901e18?placeholderIfAbsent=true&apiKey=847503bdbe2444d38b416e0e3cfc2f85"
+                class="session-image"
+                alt="Print session 1 preview"
+              />
+              <div class="session-info">
+                <h3 class="session-title">Phiên in 1</h3>
+                <p class="session-status">In thành công</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="print-session">
+            <div class="session-content">
+              <time class="session-date">16/10/2024</time>
+              <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/57e873b7434ddcd4bf72e540f9421c6f2d1d4eebfe1f236af876410fbd901e18?placeholderIfAbsent=true&apiKey=847503bdbe2444d38b416e0e3cfc2f85"
+                class="session-image"
+                alt="Print session 2 preview"
+              />
+              <div class="session-info">
+                <h3 class="session-title">Phiên in 2</h3>
+                <p class="session-status">In thành công</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="print-session">
+            <div class="session-content">
+              <time class="session-date">24/10/2024</time>
+              <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/57e873b7434ddcd4bf72e540f9421c6f2d1d4eebfe1f236af876410fbd901e18?placeholderIfAbsent=true&apiKey=847503bdbe2444d38b416e0e3cfc2f85"
+                class="session-image"
+                alt="Print session 3 preview"
+              />
+              <div class="session-info">
+                <h3 class="session-title">Phiên in 3</h3>
+                <p class="session-status-error">Thất bại - Không đủ giấy in</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
 </html>
