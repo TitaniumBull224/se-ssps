@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Print Page</title>
+        <script src="js/nav.js"></script>
+        <link rel="stylesheet" href="css/print.css" />
+    </head>
+    <body>
+        <div id="nav-placeholder"></div>
+        <div class="container">
+            <div class="property-container">
+                <div class="property-layout">
+                    <div class="image-column">
+                        <img
+                            loading="lazy"
+                            src="/ssps/img/print/docs.png"
+                            class="property-image"
+                            alt="Property exterior view"
+                        />
+                    </div>
+                    <div class="content-column">
+                        <h1 class="property-title">Cài đặt in</h1>
+                        <div class="printer-container">
+                            <div class="printer-label">Máy in</div>
+                            <div class="printer-select">
+                                <select
+                                    class="printer-select-inner"
+                                    aria-label="Select printer model"
+                                >
+                                    <option value="HP 107w-4ZB78A">
+                                        <img
+                                            loading="lazy"
+                                            src="/ssps/img/print/printer.svg"
+                                            class="printer-icon"
+                                            alt="Printer device icon"
+                                        />
+                                        HP 107w-4ZB78A
+                                    </option>
+                                    <option value="Canon LBP2900">
+                                        Canon LBP2900
+                                    </option>
+                                    <option value="Epson L3150">
+                                        Epson L3150
+                                    </option>
+                                    <!-- Add more printer options as needed -->
+                                </select>
+                            </div>
+
+                            <!--
+                            <div
+                                class="printer-select"
+                                role="button"
+                                tabindex="0"
+                            >
+                                <div class="printer-select-inner">
+                                    <img
+                                        loading="lazy"
+                                        src="/ssps/img/print/printer.svg"
+                                        class="printer-icon"
+                                        alt="Printer device icon"
+                                    />
+                                    <div
+                                        class="printer-model"
+                                        aria-label="Selected printer model"
+                                    >
+                                        HP 107w-4ZB78A
+                                    </div>
+                                    <img
+                                        loading="lazy"
+                                        src="/ssps/img/print/dropdown.svg"
+                                        class="dropdown-icon"
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                            -->
+                        </div>
+                        <div class="print-options">
+                            <div class="copies-wrapper">
+                                <label for="copiesInput" class="copies-label">
+                                    Số bản in
+                                </label>
+                                <input
+                                    type="number"
+                                    id="copiesInput"
+                                    class="copies-input"
+                                    value="1"
+                                    min="1"
+                                    aria-label="Number of copies"
+                                />
+                            </div>
+
+                            <div
+                                class="orientation-group"
+                                role="radiogroup"
+                                aria-label="Page orientation"
+                            >
+                                <span class="orientation-label"
+                                    >Hướng giấy</span
+                                >
+                                <div class="radio-wrapper">
+                                    <input
+                                        type="radio"
+                                        id="portrait"
+                                        name="orientation"
+                                        value="portrait"
+                                        class="radio-input"
+                                        checked
+                                    />
+                                    <label for="portrait" class="radio-label">
+                                        <img
+                                            src="/ssps/img/print/verticle.svg"
+                                            class="orientation-icon"
+                                            alt="Portrait orientation"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="radio-wrapper">
+                                    <input
+                                        type="radio"
+                                        id="landscape"
+                                        name="orientation"
+                                        value="landscape"
+                                        class="radio-input"
+                                    />
+                                    <label for="landscape" class="radio-label">
+                                        <img
+                                            src="/ssps/img/print/horizontal.svg"
+                                            class="orientation-icon"
+                                            alt="Landscape orientation"
+                                        />
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="print-options">
+                            <div class="print-type">
+                                <label for="printType" class="print-label">
+                                    In
+                                </label>
+                                <select
+                                    id="printType"
+                                    class="print-select"
+                                    aria-label="Select print type"
+                                >
+                                    <option value="single-sided">
+                                        Một mặt
+                                    </option>
+                                    <option value="double-sided">
+                                        Hai mặt
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="paper-size">
+                                <label for="paperSize" class="print-label">
+                                    Cỡ giấy
+                                </label>
+                                <select
+                                    id="paperSize"
+                                    class="print-select"
+                                    aria-label="Select paper size"
+                                >
+                                    <option value="A1">A1</option>
+                                    <option value="A2">A2</option>
+                                    <option value="A3">A3</option>
+                                    <option value="A4" selected>A4</option>
+                                    <option value="A5">A5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="print-options">
+                            <div class="page-range">
+                                <label for="pageRange" class="print-label">
+                                    Số trang
+                                </label>
+                                <div class="selectedRange">
+                                    <select
+                                        id="pageRange"
+                                        class="print-select"
+                                        aria-label="Select page range"
+                                    >
+                                        <option value="all">Tất cả</option>
+                                        <option value="custom">
+                                            Tùy chỉnh
+                                        </option>
+                                    </select>
+                                    <div class="pageSelect">
+                                        <label
+                                            for="pageSelect"
+                                            class="print-label"
+                                        >
+                                            In trang cụ thể
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            id="pageEnd"
+                                            class="page-input"
+                                            placeholder="1-3 hoặc 2,4,6"
+                                            aria-label="End page number"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="print-button" tabindex="0">In</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/print.js"></script>
+    </body>
+</html>

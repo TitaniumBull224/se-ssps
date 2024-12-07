@@ -1,0 +1,168 @@
+<style>
+    .print-settings {
+        display: flex;
+        margin-top: 32px;
+        gap: 29px;
+        flex-wrap: wrap;
+    }
+
+    .print-labels {
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+        color: rgba(0, 0, 0, 1);
+        font-weight: 400;
+        line-height: 1;
+        margin: auto 0;
+    }
+
+    .print-label {
+        align-self: start;
+    }
+
+    .page-number-label {
+        margin-top: 46px;
+    }
+
+    .print-options {
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 0;
+        width: fit-content;
+    }
+
+    .top-options {
+        display: flex;
+        width: 100%;
+        align-items: start;
+        gap: 20px;
+        justify-content: space-between;
+    }
+
+    .dropdown-select {
+        align-items: center;
+        border-radius: 4px;
+        background: var(--Light-Solid-Color-Extra-Card-Background, #fff);
+        box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.04);
+        display: flex;
+        min-height: 30px;
+        gap: 5px;
+        font-size: 14px;
+        color: var(--Gray-900, #171c26);
+        font-weight: 500;
+        letter-spacing: 0.28px;
+        line-height: 1;
+        padding: 5px;
+    }
+
+    .dropdown-text {
+        align-self: stretch;
+        flex: 1;
+        border-radius: 4px;
+        gap: 4px;
+        overflow: hidden;
+        margin: auto 0;
+    }
+
+    .dropdown-icon {
+        aspect-ratio: 1;
+        object-fit: contain;
+        object-position: center;
+        width: 18px;
+        align-self: stretch;
+        margin: auto 0;
+    }
+
+    .paper-size {
+        display: flex;
+        gap: 15px;
+    }
+
+    .paper-size-label {
+        color: rgba(0, 0, 0, 1);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1;
+        flex-grow: 1;
+        margin: auto 0;
+    }
+
+    .page-range {
+        margin-top: 32px;
+        width: 173px;
+        max-width: 100%;
+    }
+
+    @media (max-width: 991px) {
+        .page-number-label {
+            margin-top: 40px;
+        }
+
+        .paper-size-select {
+            white-space: initial;
+        }
+
+        .dropdown-text {
+            white-space: initial;
+        }
+    }
+
+    .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
+</style>
+
+<div class="print-settings">
+    <div class="print-labels">
+        <div class="print-label">In</div>
+        <div class="page-number-label">Số trang</div>
+    </div>
+
+    <div class="print-options">
+        <div class="top-options">
+            <div class="dropdown-select" tabindex="0" role="button">
+                <label for="sides" class="visually-hidden">Chọn mặt in</label>
+                <div class="dropdown-text" id="sides">Một mặt</div>
+                <img
+                    src="https://cdn.builder.io/api/v1/image/assets/74af9bf28a5c4f0a81971dd3c3c6206e/bd71d9575428cdb8f7e45c67c2767cef5662766a03b5dde97f97b45879c7ca56?apiKey=74af9bf28a5c4f0a81971dd3c3c6206e&"
+                    class="dropdown-icon"
+                    alt=""
+                />
+            </div>
+
+            <div class="paper-size">
+                <div class="paper-size-label">Cỡ giấy</div>
+                <div class="dropdown-select" tabindex="0" role="button">
+                    <label for="paper-size" class="visually-hidden"
+                        >Chọn cỡ giấy</label
+                    >
+                    <div class="dropdown-text" id="paper-size">A4</div>
+                    <img
+                        src="https://cdn.builder.io/api/v1/image/assets/74af9bf28a5c4f0a81971dd3c3c6206e/bd71d9575428cdb8f7e45c67c2767cef5662766a03b5dde97f97b45879c7ca56?apiKey=74af9bf28a5c4f0a81971dd3c3c6206e&"
+                        class="dropdown-icon"
+                        alt=""
+                    />
+                </div>
+            </div>
+        </div>
+
+        <div class="dropdown-select page-range" tabindex="0" role="button">
+            <label for="page-range" class="visually-hidden"
+                >Chọn phạm vi trang</label
+            >
+            <div class="dropdown-text" id="page-range">Tất cả</div>
+            <img
+                src="https://cdn.builder.io/api/v1/image/assets/74af9bf28a5c4f0a81971dd3c3c6206e/bd71d9575428cdb8f7e45c67c2767cef5662766a03b5dde97f97b45879c7ca56?apiKey=74af9bf28a5c4f0a81971dd3c3c6206e&"
+                class="dropdown-icon"
+                alt=""
+            />
+        </div>
+    </div>
+</div>

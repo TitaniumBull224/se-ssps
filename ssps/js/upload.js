@@ -1,4 +1,3 @@
-// Get references to elements
 const uploadArea = document.querySelector(".upload-area");
 const fileInput = document.querySelector("#file-input");
 const uploadedFilesContainer = document.querySelector(".uploaded-files");
@@ -13,6 +12,7 @@ const uploadedFileNames = new Set();
 fileInput.addEventListener("change", (event) => {
 	const files = event.target.files;
 	addUploadedFiles(files);
+	localStorage.setItem("uploadedFileNames", uploadedFileNames);
 });
 
 function addUploadedFiles(files) {
@@ -52,6 +52,7 @@ function addUploadedFiles(files) {
 				if (!uploadedFileNames.size) {
 					uploadedFilesContainer.style.display = "none";
 				}
+				localStorage.setItem("uploadedFileNames", uploadedFileNames);
 			});
 
 			// Append elements to uploaded-file div

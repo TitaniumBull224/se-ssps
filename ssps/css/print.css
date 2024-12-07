@@ -1,0 +1,290 @@
+.property-container {
+    border-radius: 5px;
+    background-color: rgba(238, 238, 238, 1);
+    overflow: hidden;
+    padding: 92px 48px;
+}
+.property-layout {
+    gap: 20px;
+    display: flex;
+}
+.image-column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 63%;
+}
+.property-image {
+    aspect-ratio: 0.84;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    border-radius: 0;
+    flex-grow: 1;
+}
+.content-column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 37%;
+    margin-left: 20px;
+}
+.printer-container {
+    display: flex;
+    margin-top: 17px;
+    width: 100%;
+    gap: 40px 42px;
+    font-family: Inter, sans-serif;
+}
+@media (max-width: 991px) {
+    .printer-container {
+        max-width: 100%;
+        margin-right: 2px;
+    }
+}
+.printer-label {
+    color: rgba(0, 0, 0, 1);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    flex-grow: 1;
+    margin: auto 0;
+}
+.printer-select {
+    align-items: center;
+    border-radius: 4px;
+    background: var(--Light-Solid-Color-Extra-Card-Background, #fff);
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.04);
+    display: flex;
+    height: 30px;
+    font-size: 14px;
+    color: var(--Gray-900, #171c26);
+    font-weight: 500;
+    letter-spacing: 0.28px;
+    line-height: 1;
+    justify-content: start;
+    flex-grow: 1;
+    flex-basis: auto;
+}
+.printer-select-inner {
+    border-radius: 4px;
+    align-self: stretch;
+    display: flex;
+    min-width: 240px;
+    width: 100%;
+    align-items: center;
+    gap: 9px;
+    overflow: hidden;
+    justify-content: start;
+    flex: 1;
+    flex-basis: 0%;
+    margin: auto 0;
+    padding: 8px 9px 8px 16px;
+}
+.printer-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 25px;
+    align-self: stretch;
+    margin: auto 0;
+}
+.printer-model {
+    align-self: stretch;
+    flex: 1;
+    flex-basis: 0%;
+    margin: auto 0;
+}
+.dropdown-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 18px;
+    align-self: stretch;
+    margin: auto 0;
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+.print-options {
+    display: flex;
+    margin-top: 32px;
+    width: 450px;
+    max-width: 100%;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.copies-wrapper {
+    align-self: stretch;
+    display: flex;
+    gap: 20px;
+    font-family: Inter, sans-serif;
+}
+
+.copies-label {
+    color: rgba(0, 0, 0, 1);
+    font: 400 16px/1 Inter, sans-serif;
+    margin: auto 0;
+}
+
+.copies-input {
+    align-items: center;
+    border-radius: 4px;
+    background: var(--Light-Solid-Color-Extra-Card-Background, #fff);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    display: flex;
+    /* height: 30px; */
+    width: 40px;
+    font: 500 14px/1 Inter, sans-serif;
+    color: var(--Gray-900, #171c26);
+    letter-spacing: 0.28px;
+    padding: 4px 10px;
+}
+
+.orientation-group {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: auto 0;
+}
+
+.orientation-label {
+    color: rgba(0, 0, 0, 1);
+    align-self: stretch;
+    flex-grow: 1;
+    margin: auto 0;
+    font: 400 16px/1 Inter, sans-serif;
+}
+
+.radio-wrapper {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 4px 0;
+    padding: 4px;
+}
+
+.radio-indicator {
+    border-radius: 16px;
+    background-color: #000;
+    width: 12px;
+    height: 12px;
+}
+
+.orientation-icon {
+    object-fit: contain;
+    object-position: center;
+    width: 25px;
+    height: 25px;
+    align-self: stretch;
+}
+
+.print-type {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.paper-size {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.page-range {
+    display: flex;
+    margin: 8px 12px;
+    align-items: first baseline;
+    gap: 20px;
+}
+
+.print-label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+.print-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-size: 20px;
+}
+
+.print-select::-ms-expand {
+    display: none; /* Remove default dropdown arrow in IE */
+}
+
+.pageSelected {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.page-input {
+    width: 60px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#pageEnd {
+    width: 180px;
+}
+
+.print-button {
+    align-self: stretch;
+    border-radius: 8px;
+    background-color: rgba(19, 75, 112, 1);
+    min-width: 240px;
+    width: 400px;
+    gap: 8px;
+    padding: 12px 16px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    margin: 48px auto;
+}
+
+.print-button:hover {
+    background-color: rgba(19, 75, 112, 0.8);
+}
+@media (max-width: 991px) {
+    .property-container {
+        padding: 100px 20px 0;
+    }
+    .property-layout {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+    .image-column {
+        width: 100%;
+    }
+    .property-image {
+        max-width: 100%;
+        margin-top: 40px;
+    }
+    .content-column {
+        width: 100%;
+    }
+}
