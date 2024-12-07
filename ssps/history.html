@@ -6,11 +6,131 @@
         <title>History Page</title>
         <script src="js/nav.js"></script>
         <link rel="stylesheet" href="css/history.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     </head>
     <body>
         <div id="nav-placeholder"></div>
         <div class="container">
             <!-- input here -->
+            <div class="table-container">
+                <form class="search-form" action="#" method="get">
+                  <input type="text" class="search-input" placeholder="Tìm kiếm file..." />
+                  <button type="submit" class="search-button">
+                    <span class="material-symbols-outlined" style="font-size: 22px">search</span>
+                  </button>
+                </form>
+                <div class="table-wrapper">
+                  <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Tên file</th>
+                            <th>Số tờ</th>
+                            <th>Thời gian</th>
+                            <th>Máy in</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>CHỦ ĐỀ HỘI THOẠI.pdf</td>
+                            <td>5</td>
+                            <td>24/10/2024 14:50 PM</td>
+                            <td>Brother HL-L2321D</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>CHỦ ĐỀ HỘI THOẠI.pdf</td>
+                            <td>5</td>
+                            <td>24/10/2024 14:50 PM</td>
+                            <td>Brother HL-L2321D</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>CHỦ ĐỀ HỘI THOẠI.pdf</td>
+                            <td>5</td>
+                            <td>24/10/2024 14:50 PM</td>
+                            <td>Brother HL-L2321D</td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>CHỦ ĐỀ HỘI THOẠI.pdf</td>
+                          <td>5</td>
+                          <td>24/10/2024 14:50 PM</td>
+                          <td>Brother HL-L2321D</td>
+                      </tr>
+                      <tr>
+                          <td>5</td>
+                          <td>CHỦ ĐỀ HỘI THOẠI.pdf</td>
+                          <td>5</td>
+                          <td>24/10/2024 14:50 PM</td>
+                          <td>Brother HL-L2321D</td>
+                      </tr>
+                      <tr>
+                          <td>6</td>
+                          <td>CHỦ ĐỀ HỘI THOẠI.pdf</td>
+                          <td>5</td>
+                          <td>24/10/2024 14:50 PM</td>
+                          <td>Brother HL-L2321D</td>
+                      </tr>
+                      <tr>
+                          <td>7</td>
+                          <td>CHỦ ĐỀ HỘI THOẠI.pdf</td>
+                          <td>5</td>
+                          <td>24/10/2024 14:50 PM</td>
+                          <td>Brother HL-L2321D</td>
+                      </tr>
+                      <tr>
+                          <td>8</td>
+                          <td>CHỦ ĐỀ HỘI THOẠI.pdf</td>
+                          <td>5</td>
+                          <td>24/10/2024 14:50 PM</td>
+                          <td>Brother HL-L2321D</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="pagination-container">
+                    <div class="pagination-info">1-8 trên 8</div>
+                    <div class="pagination-rows">
+                      <div class="rows-text">Dòng trên trang:</div>
+                      <div class="rows-dropdown">
+                          <div class="rows-value">10</div>
+                          <span class="material-symbols-outlined dropdown-toggle" data-toggle="dropdown" style="font-size: 15px">chevron_right</span>
+                          <ul class="options-dropdown">
+                              <li class="dropdown-item">15</li>
+                              <li class="dropdown-item">20</li>
+                              <li class="dropdown-item">25</li>
+                          </ul>
+                      </div>
+                   </div>
+                  
+                    <div class="pagination-controls">
+                        <div class="control-button previous">
+                            <span class="material-symbols-outlined" style="font-size: 22px">chevron_left</span>
+                        </div>
+                        <div class="page-info">
+                            <span class="current-page">1</span>/<span class="total-pages">1</span>
+                        </div>
+                        <div class="control-button next">
+                            <span class="material-symbols-outlined" style="font-size: 22px">chevron_right</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+              </div>
         </div>
     </body>
+    <script>
+    document.querySelector('.dropdown-toggle').addEventListener('click', function () {
+        const dropdown = this.closest('.rows-dropdown');
+        dropdown.classList.toggle('show');
+    });
+
+    document.addEventListener('click', function (e) {
+        const dropdown = document.querySelector('.rows-dropdown');
+        if (!dropdown.contains(e.target)) {
+            dropdown.classList.remove('show');
+        }
+    });
+    </script>
 </html>
