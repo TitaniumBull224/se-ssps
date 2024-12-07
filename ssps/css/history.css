@@ -155,6 +155,7 @@ body{
 }
 .rows-dropdown .material-symbols-outlined{
     transform: rotate(90deg);
+    cursor: pointer;
 }
 .rows-value {
     position: static;
