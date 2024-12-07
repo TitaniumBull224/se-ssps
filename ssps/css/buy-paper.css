@@ -15,12 +15,12 @@
   align-self: center;
   display: flex;
   margin-top: 82px;
-  min-height: 425px;
-  width: 930px;
+  width: 600px;
   max-width: 100%;
   flex-direction: column;
   font-family: Inter, sans-serif;
   padding: 22px 24px;
+  height: 370px;
 }
 
 .frame-3 {
@@ -60,7 +60,7 @@
   align-self: stretch;
   font-weight: 600;
   color: #000000;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 20px;
   position: relative;
   margin-top: -1.00px;
@@ -76,6 +76,10 @@
   position: relative;
   flex: 0 0 auto;
 }
+.pay-price{
+  display: flex;
+  width: 150px;
+}
 
 .price-button {
   background-color: #508c9b80;
@@ -90,7 +94,36 @@
   cursor: pointer;
   border-radius: 12px;
   width: 260px;
+  transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
 }
+.price-button:hover {
+  
+  opacity: 0.9; 
+  transform: scale(1.05); 
+  background-color: #6eb1c3; 
+}
+.pay-button{
+    background-color: #3e72ae;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 260px;
+    transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+  }
+  .pay-button:hover {
+    
+    opacity: 0.9; 
+    transform: scale(1.05); 
+    background-color: #3b9cc6;
+  }
+
 
 .chip-group {
   display: flex;
@@ -161,22 +194,42 @@
 .rectangle-2 {
   width: 366px;
   height: 43px;
-  top: 26px;
+  top: 150px;
   left: 0;
   background-color: #f8f8f8;
   border-radius: 4px;
   border-color: #1e3d6080;
   position: absolute;
   border: 1px solid;
+  z-index: 9;
+  
 }
+
 
 .overlap-group-wrapper {
   position: absolute;
-  width: 143px;
+  background-color: white;
+  width: 150px;
   height: 43px;
-  top: 26px;
+  top: 152px;
   left: 386px;
+  border-radius: 4px;
+  border: 1.4px solid #4276b1;
+  color: #315783;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  cursor: pointer; /* Hiển thị bàn tay khi di chuột */
+  transition: background-color 0.3s ease; /* Hiệu ứng mượt */
+  z-index: 10;
 }
+
+.overlap-group-wrapper:hover {
+  background-color: lightblue; /* Màu nền thay đổi khi hover */
+}
+
 
 .overlap-group-3 {
   position: relative;
@@ -209,12 +262,12 @@
 
 .text-wrapper-6 {
   position: absolute;
-  top: 11px;
+  top: 50px;
   left: 0;
   font-family: "Inter", Helvetica;
   font-weight: 500;
   color: #6c6c6c;
-  font-size: 15px;
+  font-size: 18px;
   letter-spacing: 0;
   line-height: 20px;
   white-space: nowrap;
@@ -222,7 +275,7 @@
 
 .text-wrapper-7 {
   position: absolute;
-  top: 11px;
+  top: 50px;
   left: 398px;
   font-family: "Inter", Helvetica;
   font-weight: 600;
@@ -261,7 +314,7 @@
   width: fit-content;
   font-weight: 500;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 24px;
   white-space: nowrap;
   position: relative;
@@ -269,3 +322,5 @@
   font-family: "Inter", Helvetica;
   letter-spacing: 0;
 }
+
+
