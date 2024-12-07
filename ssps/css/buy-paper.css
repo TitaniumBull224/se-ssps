@@ -68,6 +68,15 @@
   letter-spacing: 0;
 }
 
+.price {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
 .price-button {
   background-color: #508c9b80;
   border: none;
