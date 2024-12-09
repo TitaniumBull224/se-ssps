@@ -12,7 +12,10 @@ const uploadedFileNames = new Set();
 fileInput.addEventListener("change", (event) => {
 	const files = event.target.files;
 	addUploadedFiles(files);
-	localStorage.setItem("uploadedFileNames", uploadedFileNames);
+	localStorage.setItem(
+		"uploadedFileNames",
+		JSON.stringify([...uploadedFileNames]),
+	);
 });
 
 function addUploadedFiles(files) {
@@ -52,7 +55,10 @@ function addUploadedFiles(files) {
 				if (!uploadedFileNames.size) {
 					uploadedFilesContainer.style.display = "none";
 				}
-				localStorage.setItem("uploadedFileNames", uploadedFileNames);
+				localStorage.setItem(
+					"uploadedFileNames",
+					JSON.stringify([...uploadedFileNames]),
+				);
 			});
 
 			// Append elements to uploaded-file div

@@ -135,7 +135,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="print-options">
                             <div class="print-type">
                                 <label for="printType" class="print-label">
@@ -176,7 +175,7 @@
                                 <label for="pageRange" class="print-label">
                                     Số trang
                                 </label>
-                                <div class="selectedRange">
+                                <div class="selectRange">
                                     <select
                                         id="pageRange"
                                         class="print-select"
@@ -187,7 +186,10 @@
                                             Tùy chỉnh
                                         </option>
                                     </select>
-                                    <div class="pageSelect">
+                                    <div
+                                        class="pageSelect hidden"
+                                        id="pageSelect"
+                                    >
                                         <label
                                             for="pageSelect"
                                             class="print-label"
@@ -207,7 +209,13 @@
                             </div>
                         </div>
 
-                        <button class="print-button" tabindex="0">In</button>
+                        <button
+                            id="printButton"
+                            class="print-button"
+                            tabindex="0"
+                        >
+                            In
+                        </button>
                     </div>
                 </div>
             </div>

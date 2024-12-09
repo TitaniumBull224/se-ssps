@@ -36,12 +36,6 @@
     gap: 40px 42px;
     font-family: Inter, sans-serif;
 }
-@media (max-width: 991px) {
-    .printer-container {
-        max-width: 100%;
-        margin-right: 2px;
-    }
-}
 .printer-label {
     color: rgba(0, 0, 0, 1);
     font-size: 16px;
@@ -116,7 +110,6 @@
 .print-options {
     display: flex;
     margin-top: 32px;
-    width: 450px;
     max-width: 100%;
     align-items: center;
     gap: 20px;
@@ -205,7 +198,6 @@
 
 .page-range {
     display: flex;
-    margin: 8px 12px;
     align-items: first baseline;
     gap: 20px;
 }
@@ -230,8 +222,8 @@
     display: none; /* Remove default dropdown arrow in IE */
 }
 
-.pageSelected {
-    display: flex;
+.page-select {
+    margin: 10px 10px;
     gap: 10px;
     align-items: center;
 }
@@ -268,7 +260,16 @@
 .print-button:hover {
     background-color: rgba(19, 75, 112, 0.8);
 }
+
+.hidden {
+    display: none;
+}
+
 @media (max-width: 991px) {
+    .printer-container {
+        max-width: 100%;
+        margin-right: 2px;
+    }
     .property-container {
         padding: 100px 20px 0;
     }
