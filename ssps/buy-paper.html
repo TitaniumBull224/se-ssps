@@ -6,6 +6,53 @@
         <title>Buy Paper Page</title>
         <script src="js/nav.js"></script>
         <link rel="stylesheet" href="css/buy-paper.css" />
+        <script>
+            const pricePerUnit = 400; 
+            let totalPrice = 0; 
+            let selectedQuantity = 0; 
+
+           
+            function selectCombo(quantity) {
+                selectedQuantity = quantity; 
+                const userInput = parseInt(document.getElementById("userInput").value) || 0; 
+                const finalQuantity = userInput > 0 ? userInput : selectedQuantity; 
+                totalPrice = pricePerUnit * finalQuantity; 
+                document.querySelector(".text-wrapper-7").innerText = totalPrice.toLocaleString() + " VND"; 
+                alert(`Bạn đã chọn combo ${quantity} giấy. Tổng tiền hiện tại là: ${totalPrice.toLocaleString()} VND`); 
+            }
+
+            
+            function updateTotal() {
+        const userInput = parseInt(document.getElementById("userInput").value); 
+        if (userInput > 0) {
+           
+            totalPrice = pricePerUnit * userInput;
+            document.querySelector(".text-wrapper-7").innerText = totalPrice.toLocaleString() + " VND"; 
+        } else if (userInput === 0) {
+            
+            totalPrice = 0;
+            document.querySelector(".text-wrapper-7").innerText = "0 VND";
+        } else if (selectedQuantity > 0) {
+            
+            totalPrice = pricePerUnit * selectedQuantity;
+            document.querySelector(".text-wrapper-7").innerText = totalPrice.toLocaleString() + " VND";
+        } else {
+            
+            totalPrice = 0;
+            document.querySelector(".text-wrapper-7").innerText = "0 VND";
+        }
+    }
+
+
+           
+            function addToTotal() {
+                if (totalPrice > 0) {
+                    alert("Bạn đã thêm vào giỏ hàng thành công!");
+                } else {
+                    alert("Vui lòng chọn combo hoặc nhập số lượng giấy hợp lệ.");
+                }
+            }
+        </script>
     </head>
     <body>
         <div id="nav-placeholder"></div>
@@ -17,13 +64,14 @@
                         <div class="combo">
                             <div class="title">Combo</div>
                             <div class="price">
-                                <button class="price-button">
+                                <!-- Gắn sự kiện onclick để chọn combo -->
+                                <button class="price-button" onclick="selectCombo(50)">
                                     50 giấy - 20.000 VND
                                 </button>
-                                <button class="price-button">
+                                <button class="price-button" onclick="selectCombo(100)">
                                     100 giấy - 40.000 VND
                                 </button>
-                                <button class="price-button">
+                                <button class="price-button" onclick="selectCombo(200)">
                                     200 giấy - 80.000 VND
                                 </button>
                             </div>
@@ -31,18 +79,21 @@
 
                         <div class="user_input">
                             <div class="title">Nhập số lượng giấy muốn mua</div>
+                            <!-- Ô nhập số lượng giấy -->
                             <input
                                 type="text"
                                 class="rectangle-2"
                                 id="userInput"
-                                placeholder=""
+                                placeholder="Nhập số lượng giấy"
+                                oninput="updateTotal()"
                             />
                         </div>
-                        <button class="overlap-group-wrapper">Thêm</button>
+                        <button class="overlap-group-wrapper" onclick="addToTotal()">Thêm</button>
 
                         <div class="content">
                             <div class="text-wrapper-6">Tổng tiền</div>
-                            <div class="text-wrapper-7">100.000 VND</div>
+                            <!-- Tổng tiền sẽ được cập nhật tại đây -->
+                            <div class="text-wrapper-7">0 VND</div>
                         </div>
                     </div>
                     <div class="pay-price">
